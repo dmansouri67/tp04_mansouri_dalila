@@ -24,6 +24,9 @@ export class MenuComponent implements OnInit {
     this.router.navigate(['form']);
   }
 
+  goToContact() {
+    this.router.navigate(['contact']);
+  }
 
   ngOnInit(): void {
   }

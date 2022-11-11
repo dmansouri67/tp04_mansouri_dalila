@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeadrestComponentComponent } from './headrest-component/headrest-component.component';
@@ -14,6 +13,10 @@ import { PipeFormatPipe } from './pipe/pipe-format.pipe';
 import { ProduitComponentComponent } from './produit-component/produit-component.component';
 import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contacts/contact/contact.component';
+import { SaisirContactComponent } from './contacts/saisir-contact/saisir-contact.component';
+import { ListeContactsComponent } from './contacts/liste-contacts/liste-contacts.component';
+import { LiensComponent } from './liens/liens.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +29,18 @@ import { HomeComponent } from './home/home.component';
     PipeFormatPipe,
     ProduitComponentComponent,
     MenuComponent,
-    HomeComponent
+    HomeComponent,
+    ContactComponent,
+    SaisirContactComponent,
+    ListeContactsComponent,
+    LiensComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

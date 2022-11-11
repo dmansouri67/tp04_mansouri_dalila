@@ -1,0 +1,13 @@
+<a [routerLink]="['/']">Accueil </a> 
+<a
+
+  [ngClass]="(nb$ | async) == 0 ? 'disabled-link' : ''"
+  >Liste des Contacts
+</a>
+-
+<a (click)="goToContact()">Saisie d'un contact </a>
+
+<br />
+<div *ngFor="let f of listeFavoris$ | async">
+  {{ f.nom }}
+</div>
